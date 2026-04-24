@@ -427,7 +427,7 @@ function Index() {
       </section>
 
       {/* APPOINTMENT FORM */}
-      <section id="book" className="py-20 md:py-28">
+      <section id="book" className="scroll-mt-24 py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-4 md:px-8">
           <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto">
             <span className="text-xs tracking-[0.3em] uppercase text-gold">Book a Visit</span>
