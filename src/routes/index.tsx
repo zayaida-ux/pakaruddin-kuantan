@@ -134,19 +134,76 @@ function Index() {
 
       {/* NAV */}
       <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/70 border-b border-border/40">
-        <div className="mx-auto max-w-7xl px-4 md:px-8 h-16 md:h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="mx-auto max-w-7xl px-4 md:px-8 h-16 md:h-20 flex items-center justify-between gap-4">
+          {/* Logo (left) */}
+          <a href="#top" className="flex items-center gap-3 mr-4 md:mr-10 shrink-0">
             <img src={logo} alt="Dr Pakaruddin Dental Clinic" className="h-10 md:h-12 w-auto rounded" />
             <div className="hidden sm:block leading-tight">
               <div className="font-serif text-base md:text-lg">Dr Pakaruddin</div>
               <div className="text-[10px] md:text-xs tracking-[0.25em] text-muted-foreground uppercase">Dental Clinic</div>
             </div>
-          </div>
-          <a href={WA_URL} target="_blank" rel="noreferrer" className="hidden md:inline-flex">
-            <Button className="bg-gold text-primary-foreground hover:opacity-90 rounded-full px-6">
-              <MessageCircle className="mr-2 h-4 w-4" /> Chat with Doctor
-            </Button>
           </a>
+
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-8 text-sm text-foreground/80">
+            <a href="#services" className="hover:text-gold transition-colors">Services</a>
+            <a href="#results" className="hover:text-gold transition-colors">Results</a>
+            <a href="#reviews" className="hover:text-gold transition-colors">Reviews</a>
+            <a href="#contact" className="hover:text-gold transition-colors">Contact</a>
+          </nav>
+
+          {/* Right actions */}
+          <div className="flex items-center gap-2 md:gap-3">
+            <a href="#book" className="hidden md:inline-flex">
+              <Button className="bg-gold text-primary-foreground hover:opacity-90 rounded-full px-6">
+                <CalendarIcon className="mr-2 h-4 w-4" /> Book Appointment
+              </Button>
+            </a>
+
+            {/* Mobile menu */}
+            <Sheet>
+              <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="icon" aria-label="Open menu" className="text-foreground">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-background border-l border-border/40 w-[80%] sm:max-w-sm">
+                <div className="flex items-center gap-3 mb-8 mt-2">
+                  <img src={logo} alt="" className="h-10 w-auto rounded" />
+                  <div className="leading-tight">
+                    <div className="font-serif text-base">Dr Pakaruddin</div>
+                    <div className="text-[10px] tracking-[0.25em] text-muted-foreground uppercase">Dental Clinic</div>
+                  </div>
+                </div>
+                <nav className="flex flex-col gap-1 text-base">
+                  {[
+                    { href: "#services", label: "Services" },
+                    { href: "#results", label: "Before & After" },
+                    { href: "#reviews", label: "Reviews" },
+                    { href: "#contact", label: "Contact" },
+                  ].map((item) => (
+                    <SheetClose asChild key={item.href}>
+                      <a href={item.href} className="py-3 px-2 border-b border-border/30 hover:text-gold transition-colors">
+                        {item.label}
+                      </a>
+                    </SheetClose>
+                  ))}
+                </nav>
+                <SheetClose asChild>
+                  <a href="#book" className="block mt-8">
+                    <Button className="w-full bg-gold text-primary-foreground hover:opacity-90 rounded-full">
+                      <CalendarIcon className="mr-2 h-4 w-4" /> Book Appointment
+                    </Button>
+                  </a>
+                </SheetClose>
+                <a href={WA_URL} target="_blank" rel="noreferrer" className="block mt-3">
+                  <Button variant="outline" className="w-full rounded-full border-border/60">
+                    <MessageCircle className="mr-2 h-4 w-4" /> Chat on WhatsApp
+                  </Button>
+                </a>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </header>
 
