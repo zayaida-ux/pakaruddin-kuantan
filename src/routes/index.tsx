@@ -353,7 +353,7 @@ function Index() {
       </section>
 
       {/* BEFORE / AFTER */}
-      <section className="py-20 md:py-28">
+      <section id="results" className="scroll-mt-24 py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <motion.div {...fadeUp} className="max-w-2xl">
             <span className="text-xs tracking-[0.3em] uppercase text-gold">Real Transformations</span>
