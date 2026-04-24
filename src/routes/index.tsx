@@ -497,7 +497,7 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border/40 bg-card/40">
+      <footer id="contact" className="scroll-mt-24 border-t border-border/40 bg-card/40">
         <div className="mx-auto max-w-7xl px-4 md:px-8 py-14 grid md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-3">
