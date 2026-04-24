@@ -309,7 +309,7 @@ function Index() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 md:py-28 bg-card/30 border-y border-border/40">
+      <section id="services" className="scroll-mt-24 py-20 md:py-28 bg-card/30 border-y border-border/40">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <motion.div {...fadeUp} className="max-w-2xl">
             <span className="text-xs tracking-[0.3em] uppercase text-gold">Our Services</span>
