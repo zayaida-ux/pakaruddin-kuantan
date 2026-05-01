@@ -7,5 +7,5 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  base: '/pakaruddin-kuantan/',   // Yeh line important hai GitHub Pages ke liye
+  base: '/pakaruddin-kuantan/',   // 
 });
